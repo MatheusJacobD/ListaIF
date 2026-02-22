@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência</title>
+</head>
+<body>
+
+    Frequência:<br>
+    <input type="text" id="idFreq"><br><br>
+
+    <button onclick="ver()">Analisar frequência</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function ver(){
+
+        freq = Number(idFreq.value);
+
+        if(freq < 50){
+            resp.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" width="150">`;
+        } else {
+            resp.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" width="150">`;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento</title>
+</head>
+<body>
+
+    Renda familiar:<br>
+    <input type="text" id="idRenda"><br>
+
+    Valor da prestação:<br>
+    <input type="text" id="idPrest"><br><br>
+
+    <button onclick="verificar()">Verificar financiamento</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function verificar(){
+
+        renda = Number(idRenda.value);
+        prest = Number(idPrest.value);
+
+        perc = (prest / renda) * 100;
+
+        resp.innerHTML = `A prestação corresponde a ${perc}% da renda familiar`;
+
+        if(perc > 30){
+            resp.innerHTML += `<br><b style="color:red;">Será necessário complementar a renda familiar</b>`;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séries</title>
+</head>
+<body>
+
+    Série:<br>
+    <input type="text" id="idSerie"><br>
+
+    Episódios:<br>
+    <input type="text" id="idEp"><br><br>
+
+    <button onclick="ver()">Verificar nível</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function ver(){
+
+        serie = idSerie.value;
+        ep = Number(idEp.value);
+
+        horas = (ep*22)/60;
+
+        resp.innerHTML = `Vejo que você gosta da série ${serie}`;
+
+        if(horas > 30){
+            resp.innerHTML += `<br>Uau, você realmente gosta dessa série!`;
+        }
+    }
+</script>
+
+</html>

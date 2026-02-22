@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+
+    Nota 1:<br>
+    <input type="text" id="idN1"><br>
+
+    Nota 2:<br>
+    <input type="text" id="idN2"><br><br>
+
+    <button onclick="ver()">Verificar situação</button>
+
+</body>
+
+<script>
+    function ver(){
+
+        n1 = Number(idN1.value);
+        n2 = Number(idN2.value);
+
+        media = (n1 + n2) / 2;
+
+        if(media >= 6){
+            alert("Parabéns, aprovado!");
+        } else {
+            alert("Tente outra vez...");
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economia</title>
+</head>
+<body>
+
+    Meta:<br>
+    <input type="text" id="idMeta"><br>
+
+    Guardado:<br>
+    <input type="text" id="idGuardado"><br><br>
+
+    <button onclick="ver()">Analisar economia</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function ver(){
+
+        meta = Number(idMeta.value);
+        guardado = Number(idGuardado.value);
+
+        if(guardado >= meta){
+            resp.innerHTML = `Parabéns, meta alcançada!`;
+
+            if(guardado > meta){
+                sobra = guardado - meta;
+                resp.innerHTML += `<br>Meta ultrapassada em ${sobra}`;
+            }
+
+        } else {
+            falta = meta - guardado;
+            resp.innerHTML = `Força! Ainda em busca da meta! Falta ${falta}`;
+        }
+    }
+</script>
+
+</html>

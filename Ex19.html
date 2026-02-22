@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+</head>
+<body>
+
+    Temperatura:<br>
+    <input type="text" id="idTemp"><br><br>
+
+    <button onclick="ver()">Verificar clima</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function ver(){
+
+        temp = Number(idTemp.value);
+
+        if(temp < 10){
+            resp.innerHTML = `Apropriada p/ conservar alimento <br>
+            <img src="food01.png" width="150">`;
+        } else {
+            resp.innerHTML = `Inapropriada p/ conservar alimento <br>
+            <img src="food02.png" width="150">`;
+        }
+    }
+</script>
+
+</html>

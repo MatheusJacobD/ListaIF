@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador</title>
+</head>
+<body>
+
+    Homens:<br>
+    <input type="text" id="idHomens"><br>
+
+    Mulheres:<br>
+    <input type="text" id="idMulheres"><br><br>
+
+    <button onclick="ver()">Analisar peso</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function ver(){
+
+        h = Number(idHomens.value);
+        m = Number(idMulheres.value);
+
+        peso = (h*80) + (m*60);
+
+        resp.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso}kg`;
+
+        if(peso > 800){
+            resp.innerHTML += `<br><span style="color:blue;">Será necessário que alguém desça para que o elevador se movimente</span>`;
+        }
+    }
+</script>
+
+</html>
